@@ -1,8 +1,7 @@
-package com.kaleem.SimpleWebApp;
+package com.kaleem.SimpleWebApp.controller;
 
-import org.springframework.stereotype.Controller;
+import com.kaleem.SimpleWebApp.model.Person;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/home")

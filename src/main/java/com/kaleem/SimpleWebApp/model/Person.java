@@ -1,4 +1,4 @@
-package com.kaleem.SimpleWebApp;
+package com.kaleem.SimpleWebApp.model;
 
 import org.springframework.stereotype.Component;
 
