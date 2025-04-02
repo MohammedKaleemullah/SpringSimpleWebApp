@@ -1,13 +1,11 @@
 package com.kaleem.SimpleWebApp;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
+@RequestMapping("/home")
 public class HomeController {
 
     @GetMapping("/person")
@@ -17,7 +15,12 @@ public class HomeController {
         return p;
     }
 
-    @RequestMapping("/")
+    @PostMapping(path = "person/post")
+    public void setPerson(Person p) {
+        System.out.println(p);
+    }
+
+    @RequestMapping("")
     public String home() {
         return "HomeController says home page";
     }
