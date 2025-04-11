@@ -1,12 +1,13 @@
 package com.kaleem.SimpleWebApp.service;
 
 import com.kaleem.SimpleWebApp.model.Product;
+import lombok.Getter;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+@Getter
 @Service
 public class ProductService {
 
@@ -20,7 +21,12 @@ public class ProductService {
         );
     }
 
-    public List<Product> getProducts() {
-        return products;
+    public Product getProductsById(int productId) {
+        for(Product product : products) {
+            if(product.getId() == productId) {
+                return product;
+            }
+        }
+        return new Product(productId, "", 0);
     }
 }
