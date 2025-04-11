@@ -3,9 +3,11 @@ package com.kaleem.SimpleWebApp.model;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 
 @Getter @Setter @RequiredArgsConstructor
+@ToString
 public class Product {
     private int id;
     private String name;
