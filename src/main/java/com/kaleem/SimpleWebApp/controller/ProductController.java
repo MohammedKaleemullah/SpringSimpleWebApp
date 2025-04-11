@@ -10,10 +10,11 @@ import java.util.List;
 @RestController
 public class ProductController {
 
+    @Autowired
     ProductService productService;
 
-    @PostMapping("/products")
-    public List<Product> getProducts(int summa) {
+    @RequestMapping("/products")
+    public List<Product> getProducts() {
         return productService.getProducts();
     }
 
